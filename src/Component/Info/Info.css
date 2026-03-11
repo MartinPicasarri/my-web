@@ -1,0 +1,129 @@
+.sobre-mi {
+    background-color: #f9f9f9;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    overflow: hidden;
+}
+
+.sobre-mi h2 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 2rem;
+    color: #333;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.infouno {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 5rem;
+}
+
+.infouno img {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+    border-radius: 50%;
+}
+
+.infouno img.animate-in {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.infodos {
+    justify-items: start;
+    margin-top: 2rem;
+    width: 70%;
+    font-size: 1.5rem;
+    margin-left: 3rem;
+}
+
+.infodos p {
+    opacity: 0; 
+    transform: translateY(20px); 
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; 
+}
+
+.infodos p.visible {
+    opacity: 1; 
+    transform: translateY(0); 
+}
+
+@media (max-width: 1024px) {
+    .sobre-mi {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .info {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .infouno {
+        margin-right: 0;
+        justify-content: center;
+    }
+
+    .infouno img {
+        width: 15rem;
+        height: auto;
+    }
+
+    .infodos {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .sobre-mi h2 {
+        font-size: 1.8rem;
+    }
+
+    .infouno img {
+        width: 12rem;
+    }
+
+    .infodos {
+        font-size: 1.1rem;
+        width: 95%;
+    }
+
+    .infodos h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sobre-mi {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .sobre-mi h2 {
+        font-size: 1.5rem;
+    }
+
+    .infouno img {
+        width: 10rem;
+    }
+
+    .infodos {
+        font-size: 1rem;
+        width: 95%;
+    }
+
+    .infodos h2 {
+        font-size: 1.5rem;
+    }
+}

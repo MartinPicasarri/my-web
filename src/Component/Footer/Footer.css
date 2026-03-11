@@ -1,0 +1,35 @@
+.footer {
+    background-color: #022938;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    color: white;
+    line-height: 2rem;
+}
+
+.footer h4 {
+    font-size: 1.2rem;
+}
+
+.icon {
+    font-size: 2rem;
+    gap: 2rem;
+    display: flex;
+    justify-self: center;
+}
+
+svg {
+    color: white;
+}
+
+.git :hover{
+    color: black;
+}
+
+.linkedin :hover {
+    color: blue;
+}
+
+.wpp :hover {
+    color: green
+}

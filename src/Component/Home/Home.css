@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Mina:wght@400;700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+.presentacion {
+    background-color: rgba(240, 248, 255, 0.603);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+    overflow: hidden;
+}
+
+.presentacion-info {
+    margin-left: 7rem;
+    margin-top: 3rem;
+    line-height: 3.5rem;
+}
+
+.presentacion-info h2 {
+    font-size: 2rem;
+    font-family: cursive;
+    text-decoration:underline overline;
+}
+
+.presentacion-info h3{
+    font-family: "Roboto Mono", monospace;
+    font-weight: bolder;
+    font-size: 4rem;
+}
+
+.presentacion-info h4{
+    font-family: "Roboto Mono", monospace;
+    font-size: 3.5rem;
+    font-weight: bolder;
+}
+
+.front-part {
+    color: #056286;
+}
+
+.img-p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    perspective: 1000px;
+}
+
+.img-p img {
+    width: 25rem;
+    will-change: transform;
+    position: relative;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.img-p img.slide {
+    animation: slideIn 1s ease-out forwards;
+}
+
+.img-p img.slide-finished {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1024px) {
+    .presentacion {
+        grid-template-columns: 1fr;
+        padding: 3rem 1rem;
+    }
+
+    .presentacion-info {
+        margin-left: 2rem;
+        margin-top: 2rem;
+        line-height: 3rem;
+        text-align: center;
+    }
+
+    .presentacion-info h2 {
+        font-size: 1.8rem;
+    }
+
+    .presentacion-info h3 {
+        font-size: 3rem;
+    }
+
+    .presentacion-info h4 {
+        font-size: 2.5rem;
+    }
+
+    .img-p {
+        margin-top: 2rem;
+    }
+
+    .img-p img {
+        width: 20rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .presentacion-info {
+        margin-left: 1rem;
+        line-height: 2.5rem;
+    }
+
+    .presentacion-info h2 {
+        font-size: 1.5rem;
+    }
+
+    .presentacion-info h3 {
+        font-size: 2.5rem;
+    }
+
+    .presentacion-info h4 {
+        font-size: 2rem;
+    }
+
+    .img-p img {
+        width: 18rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .presentacion {
+        padding: 2rem 0.5rem;
+    }
+
+    .presentacion-info {
+        margin-left: 0.5rem;
+        line-height: 2rem;
+    }
+
+    .presentacion-info h2 {
+        font-size: 1.2rem;
+    }
+
+    .presentacion-info h3 {
+        font-size: 2rem;
+    }
+
+    .presentacion-info h4 {
+        font-size: 1.5rem;
+    }
+
+    .img-p img {
+        width: 15rem;
+    }
+}

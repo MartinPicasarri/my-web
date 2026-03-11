@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.contact {
+    background-color: rgba(240, 248, 255, 0.603);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    color: #333;
+    overflow: hidden;
+}
+
+.contact h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+.contact p {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    width: 70%;
+    max-width: 900px;
+    margin: 0 auto 4rem auto;
+    color: #555;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
+    padding: 0 5%;
+}
+
+.areauno, .areados {
+    background-color: #ffffff;
+    padding: 2.5rem 3.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 123, 255, 0.1);
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.areauno {
+    justify-self: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20rem;
+    transform: translateX(-50px);
+}
+
+.areados {
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(50px);
+}
+
+.areauno.animate-left {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.areados.animate-right {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.areauno h4, .areados h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: #222;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.areauno ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.areauno li {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15rem;
+    line-height: 5rem;
+    color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    transition: color 0.3s ease;
+}
+
+.areauno li:hover {
+    color: #007bff;
+}
+
+.areauno svg {
+    color: #007bff;
+    font-size: 2rem;
+    min-width: 2rem;
+}
+
+.areados form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+input,
+textarea {
+    width: 20rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #f8f8f8;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #aaa;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+    background-color: #fff;
+}
+
+.mensaje {
+    height: 9rem;
+    resize: vertical;
+}
+
+.enviar {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    align-self: center;
+    margin-top: 1.5rem;
+    width: auto;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+}
+
+.enviar:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+
+.error {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    width: 20rem;
+}
+
+.success-message {
+    color: #28a745;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.error-message {
+    color: #e74c3c;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .contact h1 {
+        font-size: 2.8rem;
+    }
+
+    .contact p {
+        width: 90%;
+        font-size: 1.05rem;
+    }
+
+    .area {
+        grid-template-columns: 1fr;
+        padding: 0 3%;
+        gap: 2rem;
+    }
+
+    .areauno, .areados {
+        justify-self: stretch;
+        padding: 2rem;
+        transform: translateX(0);
+    }
+
+    .areauno.animate-left, .areados.animate-right {
+        transform: translateX(0);
+    }
+
+    .areauno h4, .areados h4 {
+        font-size: 1.6rem;
+    }
+
+    .areauno li {
+        font-size: 1.05rem;
+    }
+
+    input, textarea {
+        width: calc(100% - 2rem);
+        padding: 0.8rem;
+        font-size: 0.95rem;
+    }
+
+    .mensaje {
+        height: 7rem;
+    }
+
+    .enviar {
+        padding: 0.9rem 2rem;
+        font-size: 1rem;
+    }
+
+    .error {
+        width: calc(100% - 2rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .contact h1 {
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+    }
+    .contact p {
+        font-size: 0.9rem;
+    }
+    .areauno h4, .areados h4 {
+        font-size: 1.3rem;
+    }
+    .areauno li {
+        font-size: 0.95rem;
+        line-height: 2.5rem;
+    }
+    .areauno svg {
+        font-size: 1.8rem;
+    }
+    input, textarea {
+        width: calc(100% - 1.5rem);
+        padding: 0.7rem;
+    }
+    .error {
+        width: calc(100% - 1.5rem);
+    }
+}
